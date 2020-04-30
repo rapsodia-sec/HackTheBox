@@ -1,0 +1,73 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-25 08:51 EST
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 08:51
+Completed NSE at 08:51, 0.00s elapsed
+Initiating NSE at 08:51
+Completed NSE at 08:51, 0.00s elapsed
+Initiating NSE at 08:51
+Completed NSE at 08:51, 0.00s elapsed
+Initiating Ping Scan at 08:51
+Scanning traverxec.htb (10.10.10.165) [4 ports]
+Completed Ping Scan at 08:51, 0.07s elapsed (1 total hosts)
+Initiating SYN Stealth Scan at 08:51
+Scanning traverxec.htb (10.10.10.165) [1000 ports]
+Discovered open port 22/tcp on 10.10.10.165
+Discovered open port 80/tcp on 10.10.10.165
+Completed SYN Stealth Scan at 08:51, 6.95s elapsed (1000 total ports)
+Initiating Service scan at 08:51
+Scanning 2 services on traverxec.htb (10.10.10.165)
+Completed Service scan at 08:51, 6.14s elapsed (2 services on 1 host)
+Initiating OS detection (try #1) against traverxec.htb (10.10.10.165)
+Retrying OS detection (try #2) against traverxec.htb (10.10.10.165)
+Initiating Traceroute at 08:51
+Completed Traceroute at 08:51, 0.05s elapsed
+Initiating Parallel DNS resolution of 2 hosts. at 08:51
+Completed Parallel DNS resolution of 2 hosts. at 08:51, 0.04s elapsed
+NSE: Script scanning 10.10.10.165.
+Initiating NSE at 08:51
+Completed NSE at 08:51, 2.51s elapsed
+Initiating NSE at 08:51
+Completed NSE at 08:51, 0.23s elapsed
+Initiating NSE at 08:51
+Completed NSE at 08:51, 0.00s elapsed
+Nmap scan report for traverxec.htb (10.10.10.165)
+Host is up (0.044s latency).
+Not shown: 998 filtered ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.9p1 Debian 10+deb10u1 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 aa:99:a8:16:68:cd:41:cc:f9:6c:84:01:c7:59:09:5c (RSA)
+|   256 93:dd:1a:23:ee:d7:1f:08:6b:58:47:09:73:a3:88:cc (ECDSA)
+|_  256 9d:d6:62:1e:7a:fb:8f:56:92:e6:37:f1:10:db:9b:ce (ED25519)
+80/tcp open  http    nostromo 1.9.6
+|_http-favicon: Unknown favicon MD5: FED84E16B6CCFE88EE7FFAAE5DFEFD34
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: nostromo 1.9.6
+|_http-title: TRAVERXEC
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 3.10 - 4.11 (92%), Linux 3.18 (92%), Linux 3.2 - 4.9 (92%), Crestron XPanel control system (90%), Linux 3.16 (89%), ASUS RT-N56U WAP (Linux 3.4) (87%), Linux 3.1 (87%), Linux 3.2 (87%), HP P2000 G3 NAS device (87%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (87%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 46.154 days (since Thu Oct 10 06:10:16 2019)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT      ADDRESS
+1   44.27 ms 10.10.14.1
+2   44.29 ms traverxec.htb (10.10.10.165)
+
+NSE: Script Post-scanning.
+Initiating NSE at 08:51
+Completed NSE at 08:51, 0.00s elapsed
+Initiating NSE at 08:51
+Completed NSE at 08:51, 0.00s elapsed
+Initiating NSE at 08:51
+Completed NSE at 08:51, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 21.53 seconds
+           Raw packets sent: 2084 (95.284KB) | Rcvd: 199 (28.864KB)

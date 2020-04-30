@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?><nmaprun start="1575298811" profile_name="Intense scan, all TCP ports" xmloutputversion="1.04" scanner="nmap" version="7.80" startstr="Mon Dec  2 10:00:11 2019" args="nmap -p 1-65535 -T4 -A -v obscurity.htb"><scaninfo services="1-65535" protocol="tcp" numservices="65535" type="syn"></scaninfo><verbose level="1"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-02 10:00 EST
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 10:00
+Completed NSE at 10:00, 0.00s elapsed
+Initiating NSE at 10:00
+Completed NSE at 10:00, 0.00s elapsed
+Initiating NSE at 10:00
+Completed NSE at 10:00, 0.00s elapsed
+Initiating Ping Scan at 10:00
+Scanning obscurity.htb (10.10.10.168) [4 ports]
+Completed Ping Scan at 10:00, 0.07s elapsed (1 total hosts)
+Initiating SYN Stealth Scan at 10:00
+Scanning obscurity.htb (10.10.10.168) [65535 ports]
+Discovered open port 8080/tcp on 10.10.10.168
+Discovered open port 22/tcp on 10.10.10.168
+SYN Stealth Scan Timing: About 11.59% done; ETC: 10:04 (0:03:56 remaining)
+SYN Stealth Scan Timing: About 25.66% done; ETC: 10:04 (0:02:57 remaining)
+SYN Stealth Scan Timing: About 49.35% done; ETC: 10:03 (0:01:33 remaining)
+SYN Stealth Scan Timing: About 72.26% done; ETC: 10:02 (0:00:46 remaining)
+Completed SYN Stealth Scan at 10:03, 222.01s elapsed (65535 total ports)
+Initiating Service scan at 10:03
+Scanning 2 services on obscurity.htb (10.10.10.168)
+Completed Service scan at 10:04, 19.45s elapsed (2 services on 1 host)
+Initiating OS detection (try #1) against obscurity.htb (10.10.10.168)
+Retrying OS detection (try #2) against obscurity.htb (10.10.10.168)
+Initiating Traceroute at 10:04
+Completed Traceroute at 10:04, 0.07s elapsed
+Initiating Parallel DNS resolution of 2 hosts. at 10:04
+Completed Parallel DNS resolution of 2 hosts. at 10:04, 0.05s elapsed
+NSE: Script scanning 10.10.10.168.
+Initiating NSE at 10:04
+Completed NSE at 10:04, 8.77s elapsed
+Initiating NSE at 10:04
+Completed NSE at 10:04, 0.13s elapsed
+Initiating NSE at 10:04
+Completed NSE at 10:04, 0.00s elapsed
+Nmap scan report for obscurity.htb (10.10.10.168)
+Host is up (0.062s latency).
+Not shown: 65531 filtered ports
+PORT     STATE  SERVICE    VERSION
+22/tcp   open   ssh        OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 f6:8b:d5:73:97:be:52:cb:12:ea:8b:02:7c:34:a3:d7 (ECDSA)
+|_  256 e8:df:55:78:76:85:4b:7b:dc:70:6a:fc:40:cc:ac:9b (ED25519)
+80/tcp   closed http
+8080/tcp open   http-proxy BadHTTPServer
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Mon, 02 Dec 2019 15:04:01
+|     Server: BadHTTPServer
+|     Last-Modified: Mon, 02 Dec 2019 15:04:01
+|     Content-Length: 4171
+|     Content-Type: text/html
+|     Connection: Closed
+|     &lt;!DOCTYPE html&gt;
+|     &lt;html lang="en"&gt;
+|     &lt;head&gt;
+|     &lt;meta charset="utf-8"&gt;
+|     &lt;title&gt;0bscura&lt;/title&gt;
+|     &lt;meta http-equiv="X-UA-Compatible" content="IE=Edge"&gt;
+|     &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+|     &lt;meta name="keywords" content=""&gt;
+|     &lt;meta name="description" content=""&gt;
+|     &lt;!-- 
+|     Easy Profile Template
+|     http://www.templatemo.com/tm-467-easy-profile
+|     &lt;!-- stylesheet css --&gt;
+|     &lt;link rel="stylesheet" href="css/bootstrap.min.css"&gt;
+|     &lt;link rel="stylesheet" href="css/font-awesome.min.css"&gt;
+|     &lt;link rel="stylesheet" href="css/templatemo-blue.css"&gt;
+|     &lt;/head&gt;
+|     &lt;body data-spy="scroll" data-target=".navbar-collapse"&gt;
+|     &lt;!-- preloader section --&gt;
+|     &lt;!--
+|     &lt;div class="preloader"&gt;
+|_    &lt;div class="sk-spinner sk-spinner-wordpress"&gt;
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: BadHTTPServer
+|_http-title: 0bscura
+9000/tcp closed cslistener
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.80%I=7%D=12/2%Time=5DE527E1%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,10FC,"HTTP/1\.1\x20200\x20OK\nDate:\x20Mon,\x2002\x20Dec\x2020
+SF:19\x2015:04:01\nServer:\x20BadHTTPServer\nLast-Modified:\x20Mon,\x2002\
+SF:x20Dec\x202019\x2015:04:01\nContent-Length:\x204171\nContent-Type:\x20t
+SF:ext/html\nConnection:\x20Closed\n\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\"
+SF:en\"&gt;\n&lt;head&gt;\n\t&lt;meta\x20charset=\"utf-8\"&gt;\n\t&lt;title&gt;0bscura&lt;/title&gt;\
+SF:n\t&lt;meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=Edge\"&gt;\n\t&lt;
+SF:meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20initial-s
+SF:cale=1\"&gt;\n\t&lt;meta\x20name=\"keywords\"\x20content=\"\"&gt;\n\t&lt;meta\x20na
+SF:me=\"description\"\x20content=\"\"&gt;\n&lt;!--\x20\nEasy\x20Profile\x20Templ
+SF:ate\nhttp://www\.templatemo\.com/tm-467-easy-profile\n--&gt;\n\t&lt;!--\x20st
+SF:ylesheet\x20css\x20--&gt;\n\t&lt;link\x20rel=\"stylesheet\"\x20href=\"css/boo
+SF:tstrap\.min\.css\"&gt;\n\t&lt;link\x20rel=\"stylesheet\"\x20href=\"css/font-a
+SF:wesome\.min\.css\"&gt;\n\t&lt;link\x20rel=\"stylesheet\"\x20href=\"css/templa
+SF:temo-blue\.css\"&gt;\n&lt;/head&gt;\n&lt;body\x20data-spy=\"scroll\"\x20data-target
+SF:=\"\.navbar-collapse\"&gt;\n\n&lt;!--\x20preloader\x20section\x20--&gt;\n&lt;!--\n&lt;
+SF:div\x20class=\"preloader\"&gt;\n\t&lt;div\x20class=\"sk-spinner\x20sk-spinner
+SF:-wordpress\"&gt;\n")%r(HTTPOptions,10FC,"HTTP/1\.1\x20200\x20OK\nDate:\x20
+SF:Mon,\x2002\x20Dec\x202019\x2015:04:01\nServer:\x20BadHTTPServer\nLast-M
+SF:odified:\x20Mon,\x2002\x20Dec\x202019\x2015:04:01\nContent-Length:\x204
+SF:171\nContent-Type:\x20text/html\nConnection:\x20Closed\n\n&lt;!DOCTYPE\x20
+SF:html&gt;\n&lt;html\x20lang=\"en\"&gt;\n&lt;head&gt;\n\t&lt;meta\x20charset=\"utf-8\"&gt;\n\t
+SF:&lt;title&gt;0bscura&lt;/title&gt;\n\t&lt;meta\x20http-equiv=\"X-UA-Compatible\"\x20co
+SF:ntent=\"IE=Edge\"&gt;\n\t&lt;meta\x20name=\"viewport\"\x20content=\"width=dev
+SF:ice-width,\x20initial-scale=1\"&gt;\n\t&lt;meta\x20name=\"keywords\"\x20conte
+SF:nt=\"\"&gt;\n\t&lt;meta\x20name=\"description\"\x20content=\"\"&gt;\n&lt;!--\x20\nE
+SF:asy\x20Profile\x20Template\nhttp://www\.templatemo\.com/tm-467-easy-pro
+SF:file\n--&gt;\n\t&lt;!--\x20stylesheet\x20css\x20--&gt;\n\t&lt;link\x20rel=\"stylesh
+SF:eet\"\x20href=\"css/bootstrap\.min\.css\"&gt;\n\t&lt;link\x20rel=\"stylesheet
+SF:\"\x20href=\"css/font-awesome\.min\.css\"&gt;\n\t&lt;link\x20rel=\"stylesheet
+SF:\"\x20href=\"css/templatemo-blue\.css\"&gt;\n&lt;/head&gt;\n&lt;body\x20data-spy=\"
+SF:scroll\"\x20data-target=\"\.navbar-collapse\"&gt;\n\n&lt;!--\x20preloader\x20
+SF:section\x20--&gt;\n&lt;!--\n&lt;div\x20class=\"preloader\"&gt;\n\t&lt;div\x20class=\"s
+SF:k-spinner\x20sk-spinner-wordpress\"&gt;\n");
+Aggressive OS guesses: Linux 3.2 - 4.9 (94%), Linux 3.1 (93%), Linux 3.2 (93%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (92%), Linux 3.18 (92%), Linux 3.16 (91%), Crestron XPanel control system (91%), Android 4.2.2 (Linux 3.4) (91%), Linux 2.6.32 (90%), Linux 2.6.39 - 3.2 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 8.580 days (since Sat Nov 23 20:09:57 2019)
+Network Distance: 2 hops
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   71.13 ms 10.10.14.1
+2   71.23 ms obscurity.htb (10.10.10.168)
+
+NSE: Script Post-scanning.
+Initiating NSE at 10:04
+Completed NSE at 10:04, 0.00s elapsed
+Initiating NSE at 10:04
+Completed NSE at 10:04, 0.00s elapsed
+Initiating NSE at 10:04
+Completed NSE at 10:04, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 256.48 seconds
+           Raw packets sent: 131303 (5.781MB) | Rcvd: 445 (65.936KB)
+</output><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="10.10.10.168"></address><hostnames><hostname type="user" name="obscurity.htb"></hostname><hostname type="PTR" name="obscurity.htb"></hostname></hostnames><ports><extraports count="65531" state="filtered"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="63"></state><service product="OpenSSH" name="ssh" extrainfo="Ubuntu Linux; protocol 2.0" version="7.6p1 Ubuntu 4ubuntu0.3" conf="10" method="probed"></service></port><port protocol="tcp" portid="80"><state reason="reset" state="closed" reason_ttl="63"></state><service method="table" conf="3" name="http"></service></port><port protocol="tcp" portid="8080"><state reason="syn-ack" state="open" reason_ttl="63"></state><service product="BadHTTPServer" method="probed" conf="10" name="http-proxy"></service></port><port protocol="tcp" portid="9000"><state reason="reset" state="closed" reason_ttl="63"></state><service method="table" conf="3" name="cslistener"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="80" proto="tcp"></portused><osmatch line="65105" name="Linux 3.2 - 4.9" accuracy="94"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="94"></osclass></osmatch><osmatch line="62708" name="Linux 3.1" accuracy="93"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="93"></osclass></osmatch><osmatch line="64455" name="Linux 3.2" accuracy="93"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="93"></osclass></osmatch><osmatch line="61606" name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="92"><osclass type="webcam" osfamily="embedded" vendor="AXIS" osgen="" accuracy="92"></osclass></osmatch><osmatch line="64256" name="Linux 3.18" accuracy="92"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="92"></osclass></osmatch><osmatch line="63962" name="Linux 3.16" accuracy="91"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="91"></osclass></osmatch><osmatch line="19544" name="Crestron XPanel control system" accuracy="91"><osclass type="specialized" osfamily="2-Series" vendor="Crestron" osgen="" accuracy="91"></osclass></osmatch><osmatch line="66359" name="Android 4.2.2 (Linux 3.4)" accuracy="91"><osclass type="phone" osfamily="Android" vendor="Google" osgen="4.2.X" accuracy="91"></osclass></osmatch><osmatch line="55173" name="Linux 2.6.32" accuracy="90"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="2.6.X" accuracy="90"></osclass></osmatch><osmatch line="58074" name="Linux 2.6.39 - 3.2" accuracy="90"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="90"></osclass></osmatch></os><uptime lastboot="Sat Nov 23 20:09:57 2019" seconds="741270"></uptime><tcpsequence index="" values="" difficulty=""></tcpsequence><ipidsequence values="0,0,0" class="All zeros"></ipidsequence><tcptssequence values="5E272D13,5E272EBF,5E272EC0" class="other"></tcptssequence><trace port="80" proto="tcp"><hop rtt="71.13" host="" ipaddr="10.10.14.1" ttl="1"></hop><hop rtt="71.23" host="obscurity.htb" ipaddr="10.10.10.168" ttl="2"></hop></trace></host><runstats><finished timestr="Mon Dec  2 10:04:27 2019" time="1575299067"></finished><hosts down="0" total="1" up="1"></hosts></runstats></nmaprun>

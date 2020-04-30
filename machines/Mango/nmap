@@ -1,0 +1,1 @@
+# Nmap 7.70 scan initiated Thu Dec 05 17:17:00 2019 as: C:\PentestBox\bin\Nmap\nmap.exe -sC -sV -v -o C:\Users\Mattia\Desktop\htb\mango\nmap mango.htb

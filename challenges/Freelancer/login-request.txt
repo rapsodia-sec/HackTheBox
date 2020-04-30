@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE items [
+<!ELEMENT items (item*)>
+<!ATTLIST items burpVersion CDATA "">
+<!ATTLIST items exportTime CDATA "">
+<!ELEMENT item (time, url, host, port, protocol, method, path, extension, request, status, responselength, mimetype, response, comment)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT port (#PCDATA)>
+<!ELEMENT protocol (#PCDATA)>
+<!ELEMENT method (#PCDATA)>
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT extension (#PCDATA)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT responselength (#PCDATA)>
+<!ELEMENT mimetype (#PCDATA)>
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT comment (#PCDATA)>
+]>
+<items burpVersion="2.1.04" exportTime="Fri Nov 22 05:38:42 EST 2019">
+  <item>
+    <time>Fri Nov 22 05:37:07 EST 2019</time>
+    <url><![CDATA[http://docker.hackthebox.eu:32614/administrat/index.php]]></url>
+    <host ip="139.59.202.58">docker.hackthebox.eu</host>
+    <port>32614</port>
+    <protocol>http</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/administrat/index.php]]></path>
+    <extension>php</extension>
+    <request base64="true"><![CDATA[UE9TVCAvYWRtaW5pc3RyYXQvaW5kZXgucGhwIEhUVFAvMS4xDQpIb3N0OiBkb2NrZXIuaGFja3RoZWJveC5ldTozMjYxNA0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0OyBydjo2MC4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzYwLjANCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksKi8qO3E9MC44DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTLGVuO3E9MC41DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNClJlZmVyZXI6IGh0dHA6Ly9kb2NrZXIuaGFja3RoZWJveC5ldTozMjYxNC9hZG1pbmlzdHJhdC9pbmRleC5waHANCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkDQpDb250ZW50LUxlbmd0aDogMjYNCkNvb2tpZTogX19hdWM9OGQ1YWM1YzExNmU0MWM1YTYwZjU3NTdiYzIxOyBQSFBTRVNTSUQ9bnE2dDFsYzc4ZHQ5dW1ocXA1YjdtcHUwdDI7IF9nYT1HQTEuMi4xNzA3OTU1OTI3LjE1NzQzNjc2OTQ7IF9naWQ9R0ExLjIuOTg2ODE2MzQ1LjE1NzQzNjc2OTQ7IF9fYXNjPTRmZWMyMmE1MTZlOTI5ZDgyNGNjN2ZkOTUzYQ0KQ29ubmVjdGlvbjogY2xvc2UNClVwZ3JhZGUtSW5zZWN1cmUtUmVxdWVzdHM6IDENCg0KdXNlcm5hbWU9ZGlvJnBhc3N3b3JkPWNhbmU=]]></request>
+    <status></status>
+    <responselength></responselength>
+    <mimetype></mimetype>
+    <response base64="true"></response>
+    <comment></comment>
+  </item>
+</items>

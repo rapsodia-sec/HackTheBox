@@ -1,0 +1,88 @@
+
+[0;33mRunning all scans on 10.10.10.171
+
+
+[0;32m---------------------Starting Nmap Quick Scan---------------------
+[0m
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-04-20 12:54 CEST
+Nmap scan report for openadmin (10.10.10.171)
+Host is up (0.037s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 0.72 seconds
+
+
+
+[0;32m---------------------Starting Nmap Basic Scan---------------------
+[0m
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-04-20 12:54 CEST
+
+
+
+[0;32m----------------------Starting Nmap UDP Scan----------------------
+[0m
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-04-20 12:54 CEST
+Warning: 10.10.10.171 giving up on port because retransmission cap hit (1).
+Nmap scan report for openadmin (10.10.10.171)
+Host is up (0.049s latency).
+All 1000 scanned ports on openadmin (10.10.10.171) are open|filtered (970) or closed (30)
+
+Nmap done: 1 IP address (1 host up) scanned in 24.29 seconds
+
+
+
+[0;32m---------------------Starting Nmap Full Scan----------------------
+[0m
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-04-20 12:55 CEST
+Initiating SYN Stealth Scan at 12:55
+Scanning openadmin (10.10.10.171) [65535 ports]
+Discovered open port 22/tcp on 10.10.10.171
+Discovered open port 80/tcp on 10.10.10.171
+Warning: 10.10.10.171 giving up on port because retransmission cap hit (1).
+SYN Stealth Scan Timing: About 22.19% done; ETC: 12:57 (0:01:49 remaining)
+SYN Stealth Scan Timing: About 44.25% done; ETC: 12:57 (0:01:17 remaining)
+SYN Stealth Scan Timing: About 66.45% done; ETC: 12:57 (0:00:46 remaining)
+Completed SYN Stealth Scan at 12:57, 139.06s elapsed (65535 total ports)
+Nmap scan report for openadmin (10.10.10.171)
+Host is up (0.036s latency).
+Not shown: 64266 closed ports, 1267 filtered ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 139.16 seconds
+           Raw packets sent: 69018 (3.037MB) | Rcvd: 65615 (2.647MB)
+
+
+[0;33mNo new ports
+[0m
+
+
+
+[0;32m---------------------Starting Nmap Vulns Scan---------------------
+[0m
+[0;33mRunning CVE scan on basic ports
+[0m
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-04-20 12:57 CEST
+
+
+[0;33mRunning Vuln scan on basic ports
+[0m
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-04-20 12:57 CEST
+
+
+
+[0;32m---------------------Recon Recommendations----------------------
+[0m
+
+
+
+[0;32m---------------------Finished all Nmap scans---------------------
+[0m
+
+[0;33mCompleted in 2 minute(s) and 48 second(s)
+

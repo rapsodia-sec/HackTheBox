@@ -1,0 +1,14 @@
+# Nmap 7.80 scan initiated Wed Apr 29 14:14:22 2020 as: nmap -sC -sV -Pn -p 49154,49155,49157,49158,49165 -T0 -oN nmap-intense cascade.htb
+Nmap scan report for cascade.htb (10.10.10.182)
+Host is up (0.037s latency).
+
+PORT      STATE SERVICE    VERSION
+49154/tcp open  msrpc      Microsoft Windows RPC
+49155/tcp open  msrpc      Microsoft Windows RPC
+49157/tcp open  ncacn_http Microsoft Windows RPC over HTTP 1.0
+49158/tcp open  msrpc      Microsoft Windows RPC
+49165/tcp open  msrpc      Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Apr 29 14:43:04 2020 -- 1 IP address (1 host up) scanned in 1721.54 seconds

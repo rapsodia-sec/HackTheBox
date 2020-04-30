@@ -1,0 +1,22 @@
+nostromo 1.9.6 è vulnerabile ad una traverse directory vulnerability,
+con msfconsole lancio l'exploit in exploit/multi/http/nostromo...
+ottengo una shell come www-data, dai file di configurazione di nostromo scopro che www-data
+ha accesso ad una sub directory della home dell'unico utente, david, ne guardo il contenuto
+e scopro un archivio.
+Sempre dalla configurazione di nostromo vedo che la directory su cui ho accesso è raggiungibile
+da browser, provo ma chiede la login.
+Trovo un file nella cartella di nostromo (.htpasswd) che contiene il nome utente e 
+l'hash della password (il file .htpasswd è indicato nella configurazione di nostromo come 
+credenziali per l'accesso alla directory protetta del sito.
+Cerco il tipo di hash, md5crypt, con hashcat e rockyou lo decripto e ottengo la password,
+Nowonly4me, accedo alla dir dal browser e scarico l'archivio, coniene chiave privata e pubblica
+rsa e il file delle trusted key contenente la chiave pubblica.
+con ssh2john ottenga dalla chiave privata un txt e con john lo cracco e ottengo la passphrase 
+della chiave privata, hunter, uso quindi la chiave privata per accedere via ssh come david,
+con un po' di ricerca trovo nella home di david il file server-status.sh che lancia
+come sudo "journeyctl" senza chiedere la password, cerco in internet e trovo i 
+GTFOBins, binari vulnerabili, tra cui journeyctl, malconfigurato tra i sudoers.
+lancio quindi il comando cntenuto nello script omettendo di fare il pipe dell'output
+verso less, rimane una shell interattiva a cui do il comando !/bin/bash 
+che viene eseguito come sudo (come il resto del comando, nonostante sia stato lanciato da 
+david grazie alla configurazione dei sudoers) ottengo così la shell da root. 

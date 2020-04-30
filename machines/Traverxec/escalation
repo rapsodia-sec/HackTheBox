@@ -1,0 +1,2 @@
+sudo /usr/bin/journalctl -n5 -unostromo.service
+#then type !/bin/bash

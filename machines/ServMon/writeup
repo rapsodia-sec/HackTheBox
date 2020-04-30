@@ -1,0 +1,25 @@
+ServMon
+
+Easy windows
+
+Da una prima scansione nmap ho notato aperta la porta 80, visitato il sito ho trovato una pagina di accesso per il sistema di video-sorveglianza NVMS-1000,
+cercando con searchsploit noto che è soggetto ad un traversal directory attack, provo quindi sfruttando metasploit-freamework ad ottenere la flag user ma non la ottengo.
+
+da nmap risulta anche aperta la porta ftp che consente l'accesso anonimo, da qui ricavo i nomi dei due utenti (Nathan e Nadine) ed un file che indica la presenza 
+sul desktop di Nathan un file contenente delle passwords, sempre sfruttando l'exploit di cui sopra scarico il file ed usando una di quelle password in abbinamento
+all'utente Nadine ottengo una sessione ssh.
+
+Da qui prendo lo user.txt e vedo che è installato sulla porta 8443 un client di gestione dei servizi, NSClient++, che risulta essere vulnerabile per una privilege escalation.
+
+è ora sufficiente caricare sul server remoto nc.exe e creare un file bat che usi nc per aprire una reverse schell verso di me.
+
+siccome NSClient++ ha un interfaccia web bindo la porta 8443 del server remoto sulla porta 8443 della mia macchina locale con il comando:
+"ssh nadine@servmon.htb 8443:localhost:8443"
+
+Ora da browser puntando a localhost:8443 raggiungo la web interface, aggiungo al client lo script creato in precedenza, aggiungo uno schedule
+in modo che il mio script venga richiamato ogni minuto, mi metto in ascolto su nc in locale e riavvio il servizio NSClient++.
+
+Attendo alcuni minuti ed ottengo una rev shell come Administrator.
+
+Siccome la macchina è ingiocabile riprovo a leggere il flag root più avanti.
+

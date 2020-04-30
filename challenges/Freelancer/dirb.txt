@@ -1,0 +1,57 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: challenges/freelancer/dirb.txt
+START_TIME: Fri Nov 22 06:27:39 2019
+URL_BASE: http://docker.hackthebox.eu:32614/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://docker.hackthebox.eu:32614/ ----
+==> DIRECTORY: http://docker.hackthebox.eu:32614/administrat/
+==> DIRECTORY: http://docker.hackthebox.eu:32614/css/
++ http://docker.hackthebox.eu:32614/favicon.ico (CODE:200|SIZE:32038)
+==> DIRECTORY: http://docker.hackthebox.eu:32614/img/
++ http://docker.hackthebox.eu:32614/index.php (CODE:200|SIZE:9541)
+==> DIRECTORY: http://docker.hackthebox.eu:32614/js/
+==> DIRECTORY: http://docker.hackthebox.eu:32614/mail/
++ http://docker.hackthebox.eu:32614/robots.txt (CODE:200|SIZE:0)
++ http://docker.hackthebox.eu:32614/server-status (CODE:403|SIZE:311)
+==> DIRECTORY: http://docker.hackthebox.eu:32614/vendor/
+
+---- Entering directory: http://docker.hackthebox.eu:32614/administrat/ ----
+==> DIRECTORY: http://docker.hackthebox.eu:32614/administrat/include/
++ http://docker.hackthebox.eu:32614/administrat/index.php (CODE:200|SIZE:1213)
+
+---- Entering directory: http://docker.hackthebox.eu:32614/css/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://docker.hackthebox.eu:32614/img/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://docker.hackthebox.eu:32614/js/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://docker.hackthebox.eu:32614/mail/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://docker.hackthebox.eu:32614/vendor/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://docker.hackthebox.eu:32614/administrat/include/ ----
++ http://docker.hackthebox.eu:32614/administrat/include/index.html (CODE:200|SIZE:0)
+
+-----------------
+END_TIME: Fri Nov 22 06:42:29 2019
+DOWNLOADED: 13836 - FOUND: 6

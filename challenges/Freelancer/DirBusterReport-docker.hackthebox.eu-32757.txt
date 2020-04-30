@@ -1,0 +1,107 @@
+DirBuster 1.0-RC1 - Report
+http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project
+Report produced on Fri Nov 22 09:17:24 EST 2019
+--------------------------------
+
+http://docker.hackthebox.eu:32757
+--------------------------------
+Directories found during testing:
+
+Dirs found with a 200 response:
+
+/administrat/
+/administrat/include/
+/img/
+/mail/
+/css/
+/js/
+/img/portfolio/
+/vendor/
+/vendor/fontawesome-free/css/
+/vendor/bootstrap/js/
+
+Dirs found with a 504 response:
+
+/
+/img/portfolio/
+/icons/small/
+/vendor/jquery-easing/
+/vendor/fontawesome-free/
+/vendor/bootstrap/
+/vendor/jquery/
+/vendor/fontawesome-free/css/
+/vendor/bootstrap/js/
+
+Dirs found with a 403 response:
+
+/icons/
+/icons/small/
+
+
+--------------------------------
+Files found during testing:
+
+Files found with a 200 responce:
+
+/administrat/index.php
+/administrat/include/config.php
+/index.php
+/portfolio.php
+/icons/README
+
+Files found with a 301 responce:
+
+/administrat/include
+/img
+/mail
+/icons/small
+/css
+/img/portfolio
+/js
+/vendor
+/vendor/fontawesome-free/css
+/vendor/bootstrap/js
+
+Files found with a 302 responce:
+
+/administrat/logout.php
+/administrat/panel.php
+
+Files found with a 504 responce:
+
+/administrat/index.php
+/img/avataaars.svg
+/mail/contact_me.php
+/css/freelancer.css
+/css/freelancer.min.css
+/js/contact_me.js
+/js/contact_me.min.js
+/js/freelancer.js
+/js/jqBootstrapValidation.js
+/js/freelancer.min.js
+/js/jqBootstrapValidation.min.js
+/vendor/fontawesome-free/css/all.css
+/vendor/fontawesome-free/css/all.min.css
+/vendor/fontawesome-free/css/brands.css
+/vendor/fontawesome-free/css/brands.min.css
+/vendor/fontawesome-free/css/fontawesome.css
+/vendor/fontawesome-free/css/fontawesome.min.css
+/vendor/fontawesome-free/css/regular.min.css
+/vendor/fontawesome-free/css/regular.css
+/vendor/fontawesome-free/css/solid.css
+/vendor/fontawesome-free/css/svg-with-js.css
+/vendor/fontawesome-free/css/solid.min.css
+/vendor/fontawesome-free/css/svg-with-js.min.css
+/vendor/fontawesome-free/css/v4-shims.css
+/vendor/fontawesome-free/css/v4-shims.min.css
+/vendor/bootstrap/js/bootstrap.bundle.js
+/vendor/bootstrap/js/bootstrap.bundle.js.map
+/vendor/bootstrap/js/bootstrap.bundle.min.js.map
+/vendor/bootstrap/js/bootstrap.bundle.min.js
+/vendor/bootstrap/js/bootstrap.js
+/vendor/bootstrap/js/bootstrap.js.map
+/vendor/bootstrap/js/bootstrap.min.js.map
+/vendor/bootstrap/js/bootstrap.min.js
+
+
+--------------------------------

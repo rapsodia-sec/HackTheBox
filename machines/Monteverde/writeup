@@ -1,0 +1,41 @@
+MONTEVERDE
+
+Con la prima enumerazione salvata in nmap.txt ho notato che il server era un Domain Controller,
+con autenticazione kerberos e Samba attivo,
+
+Lanciando poi enum4linux (output in enum4linux.txt) ho trovato alcuni gruppi 
+(di cui non conoscevo le appartenenze) e degli utenti (salvati in users.txt) 
+
+Prima di tutto ho puntato al servizio smb, generalmente il più utile per il primo foothold,
+provando alcune combinazioni di utenti e password con password generiche ma senza risultato,
+
+ho dunque provato a usare lo username come password, e lanciando il comando
+sudo smbclient -U SABatchJobs -L \\10.10.10.172 ho ottenuto l'elenco dei dispositivi condivisi su smb
+sono entrato a cercare in ognuno di loro finché ho trovato, nel dispositivo condiviso "users$" nella cartella
+dell'utente mhope un file azure.xml (salvato) all'interno del quale ho trovato una password.
+
+Ho provato dunque a collegarmi con smbclient con utente mhope e la password trovata ma non ho trovato nulla
+di interessante, ho quindi tentato di collegarmi al server via evil-winrm con le stesse credenziali ottenendo
+una sessione.
+
+mhope\Desktop GOT USER!
+
+controllando con whoami /all ho ottenuto l'elenco dei gruppi a cui il mio utente apparteneva
+e quello più stuzzicante era MEGABANK\Azure Admins, ho dunque immaginato di aver  poteri di azione su Azure,
+cercando su internet ho trovato uno script (/opt/tools/PsCabesha-tools/Privesc/Azure-ADConnect.ps1)
+che permetteva l'estrazione delle credenziali di accesso di azure.
+
+ho quindi caricato lo script (tramite evil-winrm) e lanciato i seguenti comandi:
+upload Azure-ADConnect.ps1
+import-module .\Azure-ADConnect.ps1
+Azure-ADConnect -server 127.0.0.1 -db ADSync
+
+ottenendo il seguente output:
+[+] Domain:  MEGABANK.LOCAL
+[+] Username: administrator
+[+]Password: d0m@in4dminyeah!
+
+ed ecco quindi le credenziali dell'amministratore,
+ho creato infine una nuova sessione evil-winrm con queste credenziali ottenendo una shell come root.
+
+Administrator\Desktop GOT ROOT!

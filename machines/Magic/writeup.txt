@@ -1,0 +1,40 @@
+Magic
+
+Macchina Linux di media difficoltà.
+
+Da una prima scansione nmap risultano aperte le porte 22 e 80, navigando il sito web trovo un portfolio di foto
+e gif, ed un messaggio che indica la possibilità di caricare un' immagine previa login.
+
+Azionando il link per la login atterro su una pagina che richiede user e pass,
+non ho la possibilità di inserire spazi dei box quindi provo a scrivere su un editor di testo la mia sqlinjection
+(user' OR 1=1 #) ed accedo.
+
+Qui ho solo la possibilità di selezionare un' immagine per farne l'upload, provo dunque a caricare una 
+reverse shell in php ma né modificando l'estensione né il MIME mi perfette di caricare il file.
+Creo dunque un nuovo file immagine contenente la shell (image.jpg rev_shell.php >> myShell.php.jpg)
+e in questo modo riesco a caricare il file.
+
+Con una rapida scansione dirb trovo la cartella /images/uploads in cui suppongo vengano caricati i file,
+mi metto in ascolto con nc e chiamando da browser magic.htb/images/uploads/myShell.php.jpg ottengo la shell.
+
+enumerando le cartelle a cui ho accesso, in /var/www/Magic trovo un file db.php5 contenente delle credenziali DB.
+Con la shell attuale non posso utilizzare il comando su così provo a creare una proper shell con:
+python3 -c 'import pty; pty.spawn("/bin/bash")' a questo punto provo a loggarmi come theseus 
+(utente della macchina) usando la password DB ma senza successo.
+
+provo a fare un dump del db usando le informazioni nel file trovato (user, pass, db) ed ottengo una insert 
+con una nuova password.
+
+Con la nuova password riesco a loggarmi come theseus, siccome ssh consente conessioni solo tramite chiavi 
+e non con user password genero una coppia di chiavi ed inserisco la pubblica in /home/theseus/.ssh/authorized_keys
+ed ottengo una sessione ssh.
+
+a questo punto lancio LinEnum.sh e noto un SUID (sysinfo) non di sistema ma custom.
+lanciando "strings sysinfo" vedo che lancia alcuni comandi come fdisk e cat.
+
+Creo quindi uno script: /tmp/exploit/fdisk in cui scrivo solo una reverse shell in python.
+aggiungo alla $PATH la cartella con il mio script (export /tmp/exploit:$PATH) in modo che sysinfo
+quando lancerà il comando fdisk prima cerchi nella mia cartella.
+
+controllo con "which fdisk" che il comando fdisk punti al mio script ed in seguito mi metto in ascolto con nc
+e lancio sysinfo, ottengo così una shell come root.

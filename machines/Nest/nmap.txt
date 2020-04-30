@@ -1,0 +1,17 @@
+# Nmap 7.80 scan initiated Tue Apr 21 17:09:09 2020 as: nmap -sC -oN nmap.txt 10.10.10.178
+Nmap scan report for 10.10.10.178
+Host is up (0.035s latency).
+Not shown: 999 filtered ports
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+
+Host script results:
+|_clock-skew: 3m07s
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-04-21T15:12:28
+|_  start_date: 2020-04-21T14:18:08
+
+# Nmap done at Tue Apr 21 17:09:54 2020 -- 1 IP address (1 host up) scanned in 45.81 seconds
