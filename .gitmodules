@@ -1,0 +1,3 @@
+[submodule "tools/LinEnum"]
+	path = tools/LinEnum
+	url = https://github.com/rebootuser/LinEnum.git
