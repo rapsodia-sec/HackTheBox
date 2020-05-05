@@ -1,3 +1,12 @@
 [submodule "tools/LinEnum"]
 	path = tools/LinEnum
 	url = https://github.com/rebootuser/LinEnum.git
+[submodule "tools/evil-winrm"]
+	path = tools/evil-winrm
+	url = https://github.com/Hackplayers/evil-winrm.git
+[submodule "tools/vncpwd"]
+	path = tools/vncpwd
+	url = https://github.com/jeroennijhof/vncpwd.git
+[submodule "tools/vncpasswd.py"]
+	path = tools/vncpasswd.py
+	url = https://github.com/trinitronx/vncpasswd.py.git
