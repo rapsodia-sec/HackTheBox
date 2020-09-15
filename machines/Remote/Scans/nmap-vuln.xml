@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed May 20 12:23:07 2020 as: nmap -&#45;script vuln -p 21,80,111,135,139,445,2049,5985 -oA Scans/nmap-vuln remote.htb -->
+<nmaprun scanner="nmap" args="nmap -&#45;script vuln -p 21,80,111,135,139,445,2049,5985 -oA Scans/nmap-vuln remote.htb" start="1589970187" startstr="Wed May 20 12:23:07 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="8" services="21,80,111,135,139,445,2049,5985"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1589970198" endtime="1589970729"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.10.10.180" addrtype="ipv4"/>
+<hostnames>
+<hostname name="remote.htb" type="user"/>
+<hostname name="remote.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ftp" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="sslv2-drown" output="&#xa;"></script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-aspnet-debug" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-vuln-cve2014-3704" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="rpcbind" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="2049"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="nfs" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="wsman" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="samba-vuln-cve-2012-1182" output="Could not negotiate a connection:SMB: Failed to receive bytes: ERROR">false</script><script id="smb-vuln-ms10-054" output="false">false</script><script id="smb-vuln-ms10-061" output="Could not negotiate a connection:SMB: Failed to receive bytes: ERROR">false</script></hostscript><times srtt="77195" rttvar="16806" to="144419"/>
+</host>
+<runstats><finished time="1589970729" timestr="Wed May 20 12:32:09 2020" elapsed="541.82" summary="Nmap done at Wed May 20 12:32:09 2020; 1 IP address (1 host up) scanned in 541.82 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

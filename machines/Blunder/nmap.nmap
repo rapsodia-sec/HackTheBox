@@ -1,0 +1,19 @@
+# Nmap 7.80 scan initiated Wed Sep  9 12:30:47 2020 as: nmap -sC -oA HackTheBox/machines/Blunder/ -vv -sV blunder.htb
+Nmap scan report for blunder.htb (10.10.10.191)
+Host is up, received echo-reply ttl 63 (0.76s latency).
+Scanned at 2020-09-09 12:30:48 CEST for 89s
+Not shown: 998 filtered ports
+Reason: 998 no-responses
+PORT   STATE  SERVICE REASON         VERSION
+21/tcp closed ftp     reset ttl 63
+80/tcp open   http    syn-ack ttl 63 Apache httpd 2.4.41 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: A0F0E5D852F0E3783AF700B6EE9D00DA
+|_http-generator: Blunder
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Blunder | A blunder of interesting facts
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep  9 12:32:17 2020 -- 1 IP address (1 host up) scanned in 90.11 seconds

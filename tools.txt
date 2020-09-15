@@ -1,0 +1,24 @@
+USEFULL EXTERNAL TOOLS
+
+exploitdb - searchsploit
+https://github.com/offensive-security/exploitdb.git
+
+impacket
+https://github.com/SecureAuthCorp/impacket.git
+
+LinEnum
+https://github.com/rebootuser/LinEnum.git
+
+PEASS - Privilege Escalation Awesome Scripts SUITE
+winPEAS - LinPEAS
+https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git
+
+namemash.py
+create dictionary for possible usernames
+
+vncpasswd.py
+decrypt vnc hexa crypted pass.
+
+Cutter
+rev engeneering tool
+https://github.com/radareorg/cutter/releases

@@ -1,0 +1,53 @@
+# Nmap 7.80 scan initiated Tue May 12 16:17:23 2020 as: nmap -sC -sV -T4 -v -p- -oA Scan/Nmap/nmap-intense sauna.htb
+Nmap scan report for sauna.htb (10.10.10.175)
+Host is up (0.055s latency).
+Not shown: 65516 filtered ports
+PORT      STATE SERVICE       VERSION
+53/tcp    open  domain?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|_    bind
+80/tcp    open  http          Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Egotistical Bank :: Home
+88/tcp    open  kerberos-sec  Microsoft Windows Kerberos (server time: 2020-05-12 21:23:31Z)
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp   open  ldap          Microsoft Windows Active Directory LDAP (Domain: EGOTISTICAL-BANK.LOCAL0., Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds?
+464/tcp   open  kpasswd5?
+593/tcp   open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped
+3268/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: EGOTISTICAL-BANK.LOCAL0., Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped
+5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+9389/tcp  open  mc-nmf        .NET Message Framing
+49667/tcp open  msrpc         Microsoft Windows RPC
+49673/tcp open  msrpc         Microsoft Windows RPC
+49675/tcp open  msrpc         Microsoft Windows RPC
+49686/tcp open  msrpc         Microsoft Windows RPC
+64988/tcp open  msrpc         Microsoft Windows RPC
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.80%I=7%D=5/12%Time=5EBAB08F%P=x86_64-pc-linux-gnu%r(DNSV
+SF:ersionBindReqTCP,20,"\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07version\
+SF:x04bind\0\0\x10\0\x03");
+Service Info: Host: SAUNA; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 7h03m35s
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2020-05-12T21:25:54
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May 12 16:24:54 2020 -- 1 IP address (1 host up) scanned in 450.43 seconds
