@@ -1,0 +1,261 @@
+# Nmap 7.80 scan initiated Sat Oct 17 14:19:26 2020 as: nmap -sC -sV -oN nmap-base -p- 10.13.37.10
+Nmap scan report for 10.13.37.10
+Host is up (0.13s latency).
+Not shown: 65528 closed ports
+PORT     STATE SERVICE         VERSION
+22/tcp   open  ssh             OpenSSH 7.2p2 Ubuntu 4ubuntu2.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 62:f6:49:80:81:cf:f0:07:0e:5a:ad:e9:8e:1f:2b:7c (RSA)
+|   256 54:e2:7e:5a:1c:aa:9a:ab:65:ca:fa:39:28:bc:0a:43 (ECDSA)
+|_  256 93:bc:37:b7:e0:08:ce:2d:03:99:01:0a:a9:df:da:cd (ED25519)
+53/tcp   open  domain          ISC BIND 9.10.3-P4 (Ubuntu Linux)
+| dns-nsid: 
+|_  bind.version: 9.10.3-P4-Ubuntu
+80/tcp   open  http            nginx 1.10.3 (Ubuntu)
+|_http-server-header: nginx/1.10.3 (Ubuntu)
+|_http-title: Welcome to nginx on Debian!
+5555/tcp open  freeciv?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, RTSPRequest, adbConnect: 
+|     enter your name:
+|     [31mMember manager!
+|     edit
+|     change name
+|     gift
+|     exit
+|   NULL, SMBProgNeg: 
+|     enter your name:
+|   RPCCheck: 
+|     enter your name:
+|     [31mMember manager!
+|     edit
+|     change name
+|     gift
+|     exit
+|     invalid option!
+|     [31mMember manager!
+|     edit
+|     change name
+|     gift
+|     exit
+|   SSLSessionReq: 
+|     enter your name:
+|     [31mMember manager!
+|     edit
+|     change name
+|     gift
+|     exit
+|     invalid option!
+|     [31mMember manager!
+|     edit
+|     change name
+|     gift
+|     exit
+|     invalid option!
+|     [31mMember manager!
+|     edit
+|     change name
+|     gift
+|     exit
+|     invalid option!
+|     [31mMember manager!
+|     edit
+|     change name
+|     gift
+|     exit
+|     invalid option!
+|     [31mMember manager!
+|     edit
+|     change name
+|     gift
+|     exit
+|     invalid option!
+|     [31mMember manager!
+|     edit
+|     change name
+|     gift
+|     exit
+|     invalid option!
+|     [31mMember manager!
+|     edit
+|     change name
+|     gift
+|     exit
+|     invalid option!
+|     [31mMember manager!
+|     edit
+|     change name
+|     gift
+|     exit
+|     invalid option!
+|     [31mMember manager!
+|     edit
+|     change name
+|     gift
+|     exit
+|_    invalid option!
+7777/tcp open  cbt?
+| fingerprint-strings: 
+|   Arucer, DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, RPCCheck, RTSPRequest, Socks5, X11Probe: 
+|     --==[[ Spiritual Memo ]]==--
+|     Create a memo
+|     Show memo
+|     Delete memo
+|     Can't you read mate?
+|   NULL: 
+|     --==[[ Spiritual Memo ]]==--
+|     Create a memo
+|     Show memo
+|_    Delete memo
+8888/tcp open  sun-answerbook?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP: 
+|     Oops, I'm leaking! 0x7ffda540d8a0
+|   DNSVersionBindReqTCP: 
+|     Oops, I'm leaking! 0x7fffd3062900
+|   FourOhFourRequest: 
+|     Oops, I'm leaking! 0x7ffc7e522e50
+|   GenericLines: 
+|     Oops, I'm leaking! 0x7ffce712bf00
+|   GetRequest, NULL: 
+|     Oops, I'm leaking! 0x7ffe170742d0
+|   HTTPOptions: 
+|     Oops, I'm leaking! 0x7ffffd4d8e50
+|   Help: 
+|     Oops, I'm leaking! 0x7ffe93effa90
+|   JavaRMI: 
+|     Oops, I'm leaking! 0x7ffca0bbce40
+|   Kerberos: 
+|     Oops, I'm leaking! 0x7ffdc93b3370
+|   LSCP: 
+|     Oops, I'm leaking! 0x7fffc98ad600
+|   RPCCheck: 
+|     Oops, I'm leaking! 0x7ffe06302c80
+|   RTSPRequest: 
+|     Oops, I'm leaking! 0x7ffc351e8a10
+|   SSLSessionReq: 
+|     Oops, I'm leaking! 0x7ffd139bd920
+|   TLSSessionReq: 
+|     Oops, I'm leaking! 0x7ffff1b91310
+|   TerminalServerCookie: 
+|_    Oops, I'm leaking! 0x7ffe56705bf0
+9201/tcp open  http            BaseHTTPServer 0.3 (Python 2.7.12)
+|_http-server-header: BaseHTTP/0.3 Python/2.7.12
+|_http-title: Site doesn't have a title (application/json).
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5555-TCP:V=7.80%I=7%D=10/17%Time=5F8AE490%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,11,"enter\x20your\x20name:\n")%r(GenericLines,63,"enter\x20your\x20
+SF:name:\n\x1b\[31mMember\x20manager!\x1b\[0m\n1\.\x20add\n2\.\x20edit\n3\
+SF:.\x20ban\n4\.\x20change\x20name\n5\.\x20get\x20gift\n6\.\x20exit\n")%r(
+SF:DNSVersionBindReqTCP,63,"enter\x20your\x20name:\n\x1b\[31mMember\x20man
+SF:ager!\x1b\[0m\n1\.\x20add\n2\.\x20edit\n3\.\x20ban\n4\.\x20change\x20na
+SF:me\n5\.\x20get\x20gift\n6\.\x20exit\n")%r(SMBProgNeg,11,"enter\x20your\
+SF:x20name:\n")%r(adbConnect,63,"enter\x20your\x20name:\n\x1b\[31mMember\x
+SF:20manager!\x1b\[0m\n1\.\x20add\n2\.\x20edit\n3\.\x20ban\n4\.\x20change\
+SF:x20name\n5\.\x20get\x20gift\n6\.\x20exit\n")%r(GetRequest,63,"enter\x20
+SF:your\x20name:\n\x1b\[31mMember\x20manager!\x1b\[0m\n1\.\x20add\n2\.\x20
+SF:edit\n3\.\x20ban\n4\.\x20change\x20name\n5\.\x20get\x20gift\n6\.\x20exi
+SF:t\n")%r(HTTPOptions,63,"enter\x20your\x20name:\n\x1b\[31mMember\x20mana
+SF:ger!\x1b\[0m\n1\.\x20add\n2\.\x20edit\n3\.\x20ban\n4\.\x20change\x20nam
+SF:e\n5\.\x20get\x20gift\n6\.\x20exit\n")%r(RTSPRequest,63,"enter\x20your\
+SF:x20name:\n\x1b\[31mMember\x20manager!\x1b\[0m\n1\.\x20add\n2\.\x20edit\
+SF:n3\.\x20ban\n4\.\x20change\x20name\n5\.\x20get\x20gift\n6\.\x20exit\n")
+SF:%r(RPCCheck,C5,"enter\x20your\x20name:\n\x1b\[31mMember\x20manager!\x1b
+SF:\[0m\n1\.\x20add\n2\.\x20edit\n3\.\x20ban\n4\.\x20change\x20name\n5\.\x
+SF:20get\x20gift\n6\.\x20exit\ninvalid\x20option!\n\x1b\[31mMember\x20mana
+SF:ger!\x1b\[0m\n1\.\x20add\n2\.\x20edit\n3\.\x20ban\n4\.\x20change\x20nam
+SF:e\n5\.\x20get\x20gift\n6\.\x20exit\n")%r(DNSStatusRequestTCP,63,"enter\
+SF:x20your\x20name:\n\x1b\[31mMember\x20manager!\x1b\[0m\n1\.\x20add\n2\.\
+SF:x20edit\n3\.\x20ban\n4\.\x20change\x20name\n5\.\x20get\x20gift\n6\.\x20
+SF:exit\n")%r(Help,63,"enter\x20your\x20name:\n\x1b\[31mMember\x20manager!
+SF:\x1b\[0m\n1\.\x20add\n2\.\x20edit\n3\.\x20ban\n4\.\x20change\x20name\n5
+SF:\.\x20get\x20gift\n6\.\x20exit\n")%r(SSLSessionReq,437,"enter\x20your\x
+SF:20name:\n\x1b\[31mMember\x20manager!\x1b\[0m\n1\.\x20add\n2\.\x20edit\n
+SF:3\.\x20ban\n4\.\x20change\x20name\n5\.\x20get\x20gift\n6\.\x20exit\ninv
+SF:alid\x20option!\n\x1b\[31mMember\x20manager!\x1b\[0m\n1\.\x20add\n2\.\x
+SF:20edit\n3\.\x20ban\n4\.\x20change\x20name\n5\.\x20get\x20gift\n6\.\x20e
+SF:xit\ninvalid\x20option!\n\x1b\[31mMember\x20manager!\x1b\[0m\n1\.\x20ad
+SF:d\n2\.\x20edit\n3\.\x20ban\n4\.\x20change\x20name\n5\.\x20get\x20gift\n
+SF:6\.\x20exit\ninvalid\x20option!\n\x1b\[31mMember\x20manager!\x1b\[0m\n1
+SF:\.\x20add\n2\.\x20edit\n3\.\x20ban\n4\.\x20change\x20name\n5\.\x20get\x
+SF:20gift\n6\.\x20exit\ninvalid\x20option!\n\x1b\[31mMember\x20manager!\x1
+SF:b\[0m\n1\.\x20add\n2\.\x20edit\n3\.\x20ban\n4\.\x20change\x20name\n5\.\
+SF:x20get\x20gift\n6\.\x20exit\ninvalid\x20option!\n\x1b\[31mMember\x20man
+SF:ager!\x1b\[0m\n1\.\x20add\n2\.\x20edit\n3\.\x20ban\n4\.\x20change\x20na
+SF:me\n5\.\x20get\x20gift\n6\.\x20exit\ninvalid\x20option!\n\x1b\[31mMembe
+SF:r\x20manager!\x1b\[0m\n1\.\x20add\n2\.\x20edit\n3\.\x20ban\n4\.\x20chan
+SF:ge\x20name\n5\.\x20get\x20gift\n6\.\x20exit\ninvalid\x20option!\n\x1b\[
+SF:31mMember\x20manager!\x1b\[0m\n1\.\x20add\n2\.\x20edit\n3\.\x20ban\n4\.
+SF:\x20change\x20name\n5\.\x20get\x20gift\n6\.\x20exit\ninvalid\x20option!
+SF:\n\x1b\[31mMember\x20manager!\x1b\[0m\n1\.\x20add\n2\.\x20edit\n3\.\x20
+SF:ban\n4\.\x20change\x20name\n5\.\x20get\x20gift\n6\.\x20exit\ninvalid\x2
+SF:0option!\n\x1b");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port7777-TCP:V=7.80%I=7%D=10/17%Time=5F8AE490%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,5D,"\n--==\[\[\x20Spiritual\x20Memo\x20\]\]==--\n\n\[1\]\x20Create\
+SF:x20a\x20memo\n\[2\]\x20Show\x20memo\n\[3\]\x20Delete\x20memo\n\[4\]\x20
+SF:Tap\x20out\n>\x20")%r(X11Probe,71,"\n--==\[\[\x20Spiritual\x20Memo\x20\
+SF:]\]==--\n\n\[1\]\x20Create\x20a\x20memo\n\[2\]\x20Show\x20memo\n\[3\]\x
+SF:20Delete\x20memo\n\[4\]\x20Tap\x20out\n>\x20Can't\x20you\x20read\x20mat
+SF:e\?")%r(Socks5,71,"\n--==\[\[\x20Spiritual\x20Memo\x20\]\]==--\n\n\[1\]
+SF:\x20Create\x20a\x20memo\n\[2\]\x20Show\x20memo\n\[3\]\x20Delete\x20memo
+SF:\n\[4\]\x20Tap\x20out\n>\x20Can't\x20you\x20read\x20mate\?")%r(Arucer,7
+SF:1,"\n--==\[\[\x20Spiritual\x20Memo\x20\]\]==--\n\n\[1\]\x20Create\x20a\
+SF:x20memo\n\[2\]\x20Show\x20memo\n\[3\]\x20Delete\x20memo\n\[4\]\x20Tap\x
+SF:20out\n>\x20Can't\x20you\x20read\x20mate\?")%r(GenericLines,71,"\n--==\
+SF:[\[\x20Spiritual\x20Memo\x20\]\]==--\n\n\[1\]\x20Create\x20a\x20memo\n\
+SF:[2\]\x20Show\x20memo\n\[3\]\x20Delete\x20memo\n\[4\]\x20Tap\x20out\n>\x
+SF:20Can't\x20you\x20read\x20mate\?")%r(GetRequest,71,"\n--==\[\[\x20Spiri
+SF:tual\x20Memo\x20\]\]==--\n\n\[1\]\x20Create\x20a\x20memo\n\[2\]\x20Show
+SF:\x20memo\n\[3\]\x20Delete\x20memo\n\[4\]\x20Tap\x20out\n>\x20Can't\x20y
+SF:ou\x20read\x20mate\?")%r(HTTPOptions,71,"\n--==\[\[\x20Spiritual\x20Mem
+SF:o\x20\]\]==--\n\n\[1\]\x20Create\x20a\x20memo\n\[2\]\x20Show\x20memo\n\
+SF:[3\]\x20Delete\x20memo\n\[4\]\x20Tap\x20out\n>\x20Can't\x20you\x20read\
+SF:x20mate\?")%r(RTSPRequest,71,"\n--==\[\[\x20Spiritual\x20Memo\x20\]\]==
+SF:--\n\n\[1\]\x20Create\x20a\x20memo\n\[2\]\x20Show\x20memo\n\[3\]\x20Del
+SF:ete\x20memo\n\[4\]\x20Tap\x20out\n>\x20Can't\x20you\x20read\x20mate\?")
+SF:%r(RPCCheck,71,"\n--==\[\[\x20Spiritual\x20Memo\x20\]\]==--\n\n\[1\]\x2
+SF:0Create\x20a\x20memo\n\[2\]\x20Show\x20memo\n\[3\]\x20Delete\x20memo\n\
+SF:[4\]\x20Tap\x20out\n>\x20Can't\x20you\x20read\x20mate\?")%r(DNSVersionB
+SF:indReqTCP,71,"\n--==\[\[\x20Spiritual\x20Memo\x20\]\]==--\n\n\[1\]\x20C
+SF:reate\x20a\x20memo\n\[2\]\x20Show\x20memo\n\[3\]\x20Delete\x20memo\n\[4
+SF:\]\x20Tap\x20out\n>\x20Can't\x20you\x20read\x20mate\?")%r(DNSStatusRequ
+SF:estTCP,71,"\n--==\[\[\x20Spiritual\x20Memo\x20\]\]==--\n\n\[1\]\x20Crea
+SF:te\x20a\x20memo\n\[2\]\x20Show\x20memo\n\[3\]\x20Delete\x20memo\n\[4\]\
+SF:x20Tap\x20out\n>\x20Can't\x20you\x20read\x20mate\?");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8888-TCP:V=7.80%I=7%D=10/17%Time=5F8AE490%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,3A,"Oops,\x20I'm\x20leaking!\x200x7ffe170742d0\nPwn\x20me\x20\xc2\x
+SF:af\\_\(\xe3\x83\x84\)_/\xc2\xaf\x20\n>\x20")%r(GetRequest,3A,"Oops,\x20
+SF:I'm\x20leaking!\x200x7ffe170742d0\nPwn\x20me\x20\xc2\xaf\\_\(\xe3\x83\x
+SF:84\)_/\xc2\xaf\x20\n>\x20")%r(HTTPOptions,3A,"Oops,\x20I'm\x20leaking!\
+SF:x200x7ffffd4d8e50\nPwn\x20me\x20\xc2\xaf\\_\(\xe3\x83\x84\)_/\xc2\xaf\x
+SF:20\n>\x20")%r(FourOhFourRequest,3A,"Oops,\x20I'm\x20leaking!\x200x7ffc7
+SF:e522e50\nPwn\x20me\x20\xc2\xaf\\_\(\xe3\x83\x84\)_/\xc2\xaf\x20\n>\x20"
+SF:)%r(JavaRMI,3A,"Oops,\x20I'm\x20leaking!\x200x7ffca0bbce40\nPwn\x20me\x
+SF:20\xc2\xaf\\_\(\xe3\x83\x84\)_/\xc2\xaf\x20\n>\x20")%r(LSCP,3A,"Oops,\x
+SF:20I'm\x20leaking!\x200x7fffc98ad600\nPwn\x20me\x20\xc2\xaf\\_\(\xe3\x83
+SF:\x84\)_/\xc2\xaf\x20\n>\x20")%r(GenericLines,3A,"Oops,\x20I'm\x20leakin
+SF:g!\x200x7ffce712bf00\nPwn\x20me\x20\xc2\xaf\\_\(\xe3\x83\x84\)_/\xc2\xa
+SF:f\x20\n>\x20")%r(RTSPRequest,3A,"Oops,\x20I'm\x20leaking!\x200x7ffc351e
+SF:8a10\nPwn\x20me\x20\xc2\xaf\\_\(\xe3\x83\x84\)_/\xc2\xaf\x20\n>\x20")%r
+SF:(RPCCheck,3A,"Oops,\x20I'm\x20leaking!\x200x7ffe06302c80\nPwn\x20me\x20
+SF:\xc2\xaf\\_\(\xe3\x83\x84\)_/\xc2\xaf\x20\n>\x20")%r(DNSVersionBindReqT
+SF:CP,3A,"Oops,\x20I'm\x20leaking!\x200x7fffd3062900\nPwn\x20me\x20\xc2\xa
+SF:f\\_\(\xe3\x83\x84\)_/\xc2\xaf\x20\n>\x20")%r(DNSStatusRequestTCP,3A,"O
+SF:ops,\x20I'm\x20leaking!\x200x7ffda540d8a0\nPwn\x20me\x20\xc2\xaf\\_\(\x
+SF:e3\x83\x84\)_/\xc2\xaf\x20\n>\x20")%r(Help,3A,"Oops,\x20I'm\x20leaking!
+SF:\x200x7ffe93effa90\nPwn\x20me\x20\xc2\xaf\\_\(\xe3\x83\x84\)_/\xc2\xaf\
+SF:x20\n>\x20")%r(SSLSessionReq,3A,"Oops,\x20I'm\x20leaking!\x200x7ffd139b
+SF:d920\nPwn\x20me\x20\xc2\xaf\\_\(\xe3\x83\x84\)_/\xc2\xaf\x20\n>\x20")%r
+SF:(TerminalServerCookie,3A,"Oops,\x20I'm\x20leaking!\x200x7ffe56705bf0\nP
+SF:wn\x20me\x20\xc2\xaf\\_\(\xe3\x83\x84\)_/\xc2\xaf\x20\n>\x20")%r(TLSSes
+SF:sionReq,3A,"Oops,\x20I'm\x20leaking!\x200x7ffff1b91310\nPwn\x20me\x20\x
+SF:c2\xaf\\_\(\xe3\x83\x84\)_/\xc2\xaf\x20\n>\x20")%r(Kerberos,3A,"Oops,\x
+SF:20I'm\x20leaking!\x200x7ffdc93b3370\nPwn\x20me\x20\xc2\xaf\\_\(\xe3\x83
+SF:\x84\)_/\xc2\xaf\x20\n>\x20");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct 17 14:36:14 2020 -- 1 IP address (1 host up) scanned in 1007.42 seconds
