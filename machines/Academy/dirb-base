@@ -1,0 +1,26 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb-base
+START_TIME: Mon Jan  4 13:59:55 2021
+URL_BASE: http://academy.htb/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://academy.htb/ ----
++ http://academy.htb/admin.php (CODE:200|SIZE:2633)
+==> DIRECTORY: http://academy.htb/images/
++ http://academy.htb/index.php (CODE:200|SIZE:2117)
++ http://academy.htb/server-status (CODE:403|SIZE:276)
+
+---- Entering directory: http://academy.htb/images/ ----
+
+-----------------
+END_TIME: Mon Jan  4 15:34:44 2021
+DOWNLOADED: 9224 - FOUND: 3
