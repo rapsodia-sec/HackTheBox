@@ -1,0 +1,185 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb-def
+START_TIME: Sun Oct 11 18:18:32 2020
+URL_BASE: http://popcorn.htb/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://popcorn.htb/ ----
++ http://popcorn.htb/cgi-bin/ (CODE:403|SIZE:287)
++ http://popcorn.htb/index (CODE:200|SIZE:177)
++ http://popcorn.htb/index.html (CODE:200|SIZE:177)
++ http://popcorn.htb/server-status (CODE:403|SIZE:292)
++ http://popcorn.htb/test (CODE:200|SIZE:47335)
+==> DIRECTORY: http://popcorn.htb/torrent/
+
+---- Entering directory: http://popcorn.htb/torrent/ ----
+==> DIRECTORY: http://popcorn.htb/torrent/admin/
++ http://popcorn.htb/torrent/browse (CODE:200|SIZE:9278)
++ http://popcorn.htb/torrent/comment (CODE:200|SIZE:936)
++ http://popcorn.htb/torrent/config (CODE:200|SIZE:0)
+==> DIRECTORY: http://popcorn.htb/torrent/css/
+==> DIRECTORY: http://popcorn.htb/torrent/database/
++ http://popcorn.htb/torrent/download (CODE:200|SIZE:0)
++ http://popcorn.htb/torrent/edit (CODE:200|SIZE:0)
+==> DIRECTORY: http://popcorn.htb/torrent/health/
++ http://popcorn.htb/torrent/hide (CODE:200|SIZE:3765)
+==> DIRECTORY: http://popcorn.htb/torrent/images/
++ http://popcorn.htb/torrent/index (CODE:200|SIZE:11356)
++ http://popcorn.htb/torrent/index.php (CODE:200|SIZE:11356)
+==> DIRECTORY: http://popcorn.htb/torrent/js/
+==> DIRECTORY: http://popcorn.htb/torrent/lib/
++ http://popcorn.htb/torrent/login (CODE:200|SIZE:8371)
++ http://popcorn.htb/torrent/logout (CODE:200|SIZE:182)
++ http://popcorn.htb/torrent/preview (CODE:200|SIZE:28104)
+==> DIRECTORY: http://popcorn.htb/torrent/readme/
++ http://popcorn.htb/torrent/rss (CODE:200|SIZE:964)
++ http://popcorn.htb/torrent/secure (CODE:200|SIZE:4)
++ http://popcorn.htb/torrent/stylesheet (CODE:200|SIZE:321)
+==> DIRECTORY: http://popcorn.htb/torrent/templates/
++ http://popcorn.htb/torrent/thumbnail (CODE:200|SIZE:1789)
+==> DIRECTORY: http://popcorn.htb/torrent/torrents/
+==> DIRECTORY: http://popcorn.htb/torrent/upload/
++ http://popcorn.htb/torrent/upload_file (CODE:200|SIZE:0)
+==> DIRECTORY: http://popcorn.htb/torrent/users/
+
+---- Entering directory: http://popcorn.htb/torrent/admin/ ----
++ http://popcorn.htb/torrent/admin/admin (CODE:200|SIZE:2988)
++ http://popcorn.htb/torrent/admin/admin.php (CODE:200|SIZE:2988)
+==> DIRECTORY: http://popcorn.htb/torrent/admin/images/
++ http://popcorn.htb/torrent/admin/index (CODE:200|SIZE:80)
++ http://popcorn.htb/torrent/admin/index.php (CODE:200|SIZE:80)
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb-def
+START_TIME: Sun Oct 11 18:43:05 2020
+URL_BASE: http://popcorn.htb/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://popcorn.htb/ ----
++ http://popcorn.htb/cgi-bin/ (CODE:403|SIZE:287)
++ http://popcorn.htb/index (CODE:200|SIZE:177)
++ http://popcorn.htb/index.html (CODE:200|SIZE:177)
++ http://popcorn.htb/server-status (CODE:403|SIZE:292)
++ http://popcorn.htb/test (CODE:200|SIZE:47335)
+==> DIRECTORY: http://popcorn.htb/torrent/
+
+---- Entering directory: http://popcorn.htb/torrent/ ----
+==> DIRECTORY: http://popcorn.htb/torrent/admin/
++ http://popcorn.htb/torrent/browse (CODE:200|SIZE:9278)
++ http://popcorn.htb/torrent/comment (CODE:200|SIZE:936)
++ http://popcorn.htb/torrent/config (CODE:200|SIZE:0)
+==> DIRECTORY: http://popcorn.htb/torrent/css/
+==> DIRECTORY: http://popcorn.htb/torrent/database/
++ http://popcorn.htb/torrent/download (CODE:200|SIZE:0)
++ http://popcorn.htb/torrent/edit (CODE:200|SIZE:0)
+==> DIRECTORY: http://popcorn.htb/torrent/health/
++ http://popcorn.htb/torrent/hide (CODE:200|SIZE:3765)
+==> DIRECTORY: http://popcorn.htb/torrent/images/
++ http://popcorn.htb/torrent/index (CODE:200|SIZE:11356)
++ http://popcorn.htb/torrent/index.php (CODE:200|SIZE:11356)
+==> DIRECTORY: http://popcorn.htb/torrent/js/
+==> DIRECTORY: http://popcorn.htb/torrent/lib/
++ http://popcorn.htb/torrent/login (CODE:200|SIZE:8367)
++ http://popcorn.htb/torrent/logout (CODE:200|SIZE:182)
++ http://popcorn.htb/torrent/preview (CODE:200|SIZE:28104)
+==> DIRECTORY: http://popcorn.htb/torrent/readme/
++ http://popcorn.htb/torrent/rss (CODE:200|SIZE:964)
++ http://popcorn.htb/torrent/secure (CODE:200|SIZE:4)
++ http://popcorn.htb/torrent/stylesheet (CODE:200|SIZE:321)
+==> DIRECTORY: http://popcorn.htb/torrent/templates/
++ http://popcorn.htb/torrent/thumbnail (CODE:200|SIZE:1789)
+==> DIRECTORY: http://popcorn.htb/torrent/torrents/
+==> DIRECTORY: http://popcorn.htb/torrent/upload/
++ http://popcorn.htb/torrent/upload_file (CODE:200|SIZE:0)
+==> DIRECTORY: http://popcorn.htb/torrent/users/
+
+---- Entering directory: http://popcorn.htb/torrent/admin/ ----
++ http://popcorn.htb/torrent/admin/admin (CODE:200|SIZE:2988)
++ http://popcorn.htb/torrent/admin/admin.php (CODE:200|SIZE:2988)
+==> DIRECTORY: http://popcorn.htb/torrent/admin/images/
++ http://popcorn.htb/torrent/admin/index (CODE:200|SIZE:80)
++ http://popcorn.htb/torrent/admin/index.php (CODE:200|SIZE:80)
+==> DIRECTORY: http://popcorn.htb/torrent/admin/templates/
++ http://popcorn.htb/torrent/admin/users (CODE:200|SIZE:80)
+
+---- Entering directory: http://popcorn.htb/torrent/css/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://popcorn.htb/torrent/database/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://popcorn.htb/torrent/health/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://popcorn.htb/torrent/images/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://popcorn.htb/torrent/js/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://popcorn.htb/torrent/lib/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://popcorn.htb/torrent/readme/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://popcorn.htb/torrent/templates/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://popcorn.htb/torrent/torrents/ ----
++ http://popcorn.htb/torrent/torrents/index (CODE:200|SIZE:0)
++ http://popcorn.htb/torrent/torrents/index.php (CODE:200|SIZE:0)
+
+---- Entering directory: http://popcorn.htb/torrent/upload/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://popcorn.htb/torrent/users/ ----
++ http://popcorn.htb/torrent/users/change_password (CODE:200|SIZE:80)
++ http://popcorn.htb/torrent/users/forgot_password (CODE:200|SIZE:7918)
++ http://popcorn.htb/torrent/users/img (CODE:200|SIZE:701)
++ http://popcorn.htb/torrent/users/index (CODE:200|SIZE:80)
++ http://popcorn.htb/torrent/users/index.php (CODE:200|SIZE:80)
++ http://popcorn.htb/torrent/users/registration (CODE:200|SIZE:8180)
+==> DIRECTORY: http://popcorn.htb/torrent/users/templates/
+
+---- Entering directory: http://popcorn.htb/torrent/admin/images/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://popcorn.htb/torrent/admin/templates/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://popcorn.htb/torrent/users/templates/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+-----------------
+END_TIME: Sun Oct 11 19:12:40 2020
+DOWNLOADED: 23060 - FOUND: 34
