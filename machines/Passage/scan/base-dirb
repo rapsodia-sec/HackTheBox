@@ -1,0 +1,46 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: base-dirb
+START_TIME: Mon Jan 25 13:48:39 2021
+URL_BASE: http://passage.htb/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://passage.htb/ ----
+
+(!) FATAL: Too many errors connecting to host
+    (Possible cause: COULDNT CONNECT)
+
+-----------------
+END_TIME: Mon Jan 25 13:49:22 2021
+DOWNLOADED: 374 - FOUND: 0
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: base-dirb
+START_TIME: Mon Jan 25 13:50:03 2021
+URL_BASE: http://passage.htb/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://passage.htb/ ----
+
+(!) FATAL: Too many errors connecting to host
+    (Possible cause: COULDNT CONNECT)
+
+-----------------
+END_TIME: Mon Jan 25 13:50:03 2021
+DOWNLOADED: 0 - FOUND: 0
