@@ -1,0 +1,61 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: /home/rapsodia/HackTheBox/machines/Armageddon/dirb-base
+START_TIME: Sat May 15 15:09:01 2021
+URL_BASE: http://armageddon.htb/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://armageddon.htb/ ----
++ http://armageddon.htb/cgi-bin/ (CODE:403|SIZE:210)
+==> DIRECTORY: http://armageddon.htb/includes/
++ http://armageddon.htb/index.php (CODE:200|SIZE:7480)
+==> DIRECTORY: http://armageddon.htb/misc/
+==> DIRECTORY: http://armageddon.htb/modules/
++ http://armageddon.htb/nc (CODE:200|SIZE:34952)
+==> DIRECTORY: http://armageddon.htb/profiles/
++ http://armageddon.htb/robots.txt (CODE:200|SIZE:2189)
+==> DIRECTORY: http://armageddon.htb/scripts/
+==> DIRECTORY: http://armageddon.htb/sites/
+==> DIRECTORY: http://armageddon.htb/themes/
++ http://armageddon.htb/web.config (CODE:200|SIZE:2200)
++ http://armageddon.htb/xmlrpc.php (CODE:200|SIZE:42)
+
+---- Entering directory: http://armageddon.htb/includes/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://armageddon.htb/misc/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://armageddon.htb/modules/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://armageddon.htb/profiles/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://armageddon.htb/scripts/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://armageddon.htb/sites/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://armageddon.htb/themes/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+-----------------
+END_TIME: Sat May 15 15:17:13 2021
+DOWNLOADED: 4612 - FOUND: 6
