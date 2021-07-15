@@ -1,0 +1,32 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb
+START_TIME: Thu Apr  1 14:21:01 2021
+URL_BASE: https://laboratory.htb/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: https://laboratory.htb/ ----
+==> DIRECTORY: https://laboratory.htb/assets/
+==> DIRECTORY: https://laboratory.htb/images/
++ https://laboratory.htb/index.html (CODE:200|SIZE:7254)
++ https://laboratory.htb/server-status (CODE:403|SIZE:280)
+
+---- Entering directory: https://laboratory.htb/assets/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: https://laboratory.htb/images/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+-----------------
+END_TIME: Thu Apr  1 14:28:22 2021
+DOWNLOADED: 4612 - FOUND: 2
