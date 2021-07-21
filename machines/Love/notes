@@ -1,0 +1,8 @@
+Found website, there is a form
+sqlinjectable, got creds: 
+user: admin
+pass hash: $2y$10$gxeMJxhuoElMHZ7JZxkkieMGz5C0FW6Q60tyBvQfsgiVkZY7PaEj2
+
+found subdomain, scanning http://loaclhost:5000 got page with credentials.
+admin @LoveIsInTheAir!!!!
+found page http://love.htb/admin/home.php where could login.

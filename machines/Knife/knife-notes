@@ -1,0 +1,6 @@
+sito vuoto, da network vedo php 8.1.0-dev è vulnerabile, ho shell come utente, user.txt
+
+cambio exploit per shell remota, uso rev-php.py ora ho shell più interattiva, vedo SUID, ho knife senza pass.
+eseguo "sudo knife exec -E 'exec "/bin/sh"' per eseguire localmente comandi ruby tramite shell del server chef.
+
+sono root.
