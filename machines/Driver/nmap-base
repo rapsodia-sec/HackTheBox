@@ -1,0 +1,32 @@
+# Nmap 7.92 scan initiated Fri Nov 26 13:41:57 2021 as: nmap -sC -sV -oN nmap-base driver.htb
+Nmap scan report for driver.htb (10.10.11.106)
+Host is up (0.085s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE SERVICE      VERSION
+80/tcp  open  http         Microsoft IIS httpd 10.0
+| http-auth: 
+| HTTP/1.1 401 Unauthorized\x0D
+|_  Basic realm=MFP Firmware Update Center. Please enter password for admin
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+135/tcp open  msrpc        Microsoft Windows RPC
+445/tcp open  microsoft-ds Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+Service Info: Host: DRIVER; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+|_clock-skew: mean: 6h59m57s, deviation: 0s, median: 6h59m57s
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-time: 
+|   date: 2021-11-26T19:42:12
+|_  start_date: 2021-11-26T13:17:44
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov 26 13:42:53 2021 -- 1 IP address (1 host up) scanned in 55.36 seconds
