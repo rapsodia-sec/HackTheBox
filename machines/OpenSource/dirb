@@ -1,0 +1,22 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb
+START_TIME: Sat Aug  6 02:34:24 2022
+URL_BASE: http://opensource.htb/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://opensource.htb/ ----
++ http://opensource.htb/console (CODE:200|SIZE:1563)
++ http://opensource.htb/download (CODE:200|SIZE:2489147)
+
+-----------------
+END_TIME: Sat Aug  6 02:40:45 2022
+DOWNLOADED: 4612 - FOUND: 2

